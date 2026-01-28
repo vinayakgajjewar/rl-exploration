@@ -1,2 +1,4 @@
-# rl-exploration
-My first encounters with reinforcement learning
+# Reinforcement learning
+
+https://www.geeksforgeeks.org/machine-learning/what-is-reinforcement-learning/
+
