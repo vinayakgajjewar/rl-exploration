@@ -133,17 +133,19 @@ optimal_path = get_optimal_path(Q, start, goal, actions, maze)
 
 
 def plot_maze_with_path(path):
-    # Change these :)
-    cmap = ListedColormap(['#eef8ea', '#a8c79c'])
+    # green-200 and green-300
+    cmap = ListedColormap(['#bbf7d0', '#86efac'])
 
     plt.figure(figsize=(8, 8))
     plt.imshow(maze, cmap=cmap)
 
-    # Why are we plotting [1][0] instead of [0][1]?
-    plt.scatter(start[1], start[0], marker='o', color='#81c784', s=200, label='Start', zorder=5)
-    plt.scatter(goal[1], goal[0], marker='*', color='#388e3c', edgecolors='black', s=300, label='Goal', zorder=5)
+    # green-500
+    plt.scatter(start[1], start[0], marker='o', color='#22c55e', s=200, label='Start', zorder=5)
+    plt.scatter(goal[1], goal[0], marker='*', color='#22c55e', s=300, label='Goal', zorder=5)
     rows, cols = zip(*path)
-    plt.plot(cols, rows, color='#60b37a', linewidth=4, label='Learned path', zorder=4)
+
+    # green-700
+    plt.plot(cols, rows, color='#15803d', linewidth=4, label='Learned path', zorder=4)
 
     plt.title('Reinforcement learning maze navigation')
     plt.gca().invert_yaxis()
